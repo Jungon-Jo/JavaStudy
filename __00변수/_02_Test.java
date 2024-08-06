@@ -1,6 +1,6 @@
 package __00변수;
 
-public class Test02 {
+public class _02_Test {
 
 	public static void main(String[] args) {
 		int a = 10;
@@ -9,6 +9,7 @@ public class Test02 {
 		String d = "apple";
 		// = 대입 연산자, 뒤에있는 값을 앞의 변수에 저장하겠다.
 		System.out.println(a);
+		System.out.println(b);
 		System.out.println(d);
 		System.out.println(c);
 		System.out.println(a+10);
