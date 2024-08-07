@@ -21,7 +21,7 @@ public class test02 {
 		System.out.println(lastName[0] + "/" + lastName[1] + "/" + lastName[2]);
 		System.out.println("--------------------------------------------------");
 		System.out.println("문제 3");
-		int [] lotto = {6, 12, 33, 4, 5, 26};
+		int[] lotto = {6, 12, 33, 4, 5, 26};
 		System.out.println(lotto[2] + 2);
 //		System.out.println(lotto[0]+"/"+lotto[1]+"/"+lotto[2]+"/"+lotto[3]+"/"+lotto[4]+"/"+lotto[5]);
 		System.out.println("--------------------------------------------------");
