@@ -1,4 +1,4 @@
-package __00변수;
+package __00Variable;
 
 public class _01_Test {
 
