@@ -49,19 +49,16 @@ public class _00_Q1 {
 				cnt2++;
 			}
 		}
-		System.out.println(sum2);
 		System.out.println(sum2 / cnt2);
 		// 평균을 구하시오. 단, 최저점수는 포함하지 마시오.
 		int minValue = 65;
 		double cnt3 = 0;
 		double sum3 = 0;
 		for (int i = 0; i < 5; i++) {
-			if (a[i] >= 50) {
-				sum3 += a[i];
-				cnt3++;
-				if (a[i] < minValue) {
-					minValue = a[i];
-				}
+			sum3 += a[i];
+			cnt3++;
+			if (a[i] < minValue) {
+				minValue = a[i];
 			}
 		}
 		System.out.println((sum3 - minValue) / (cnt3 - 1));
