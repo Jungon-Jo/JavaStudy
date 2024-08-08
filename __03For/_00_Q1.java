@@ -43,6 +43,7 @@ public class _00_Q1 {
 		// 평균을 구하시오. 단, 50점 이상
 		double cnt2 = 0;
 		double sum2 = 0;
+		// 누적합 구하기 & 배열 개수 구하기
 		for (int i = 0; i < 5; i++) {
 			if (a[i] >= 50) {
 				sum2 += a[i];
@@ -54,9 +55,11 @@ public class _00_Q1 {
 		int minValue = 65;
 		double cnt3 = 0;
 		double sum3 = 0;
+		// 배열의 value 누적합 구하기
 		for (int i = 0; i < 5; i++) {
 			sum3 += a[i];
 			cnt3++;
+			// 배열의 value 중 최소값 구하기
 			if (a[i] < minValue) {
 				minValue = a[i];
 			}
