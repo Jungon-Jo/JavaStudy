@@ -126,16 +126,24 @@ public class test04 {
 		pastFib = 0;
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제9");
-//		for (int i = 1; i < 20; i = pastFib) {
-//			System.out.println(fib + " ");
-//			int futureFib = fib + pastFib;
-//			pastFib = fib;
-//			fib = futureFib;
-//		}
+		for (int i = 1; i < 20; /*증감식 생략 가능*/) {
+			System.out.println(i);
+			int presentFib = i; // 현재 i 값 백업
+			i += pastFib; // 다음 i 값
+			pastFib = presentFib; // 이전 pastFib에 현재 i 값 저장
+		}
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제10");
 		for (int i = 1; i <= 100000000; i *= 10) {
 			sum += ((int) (987654321 / i) % 10);
+		}
+		System.out.println(sum);
+		sum = 0; // sum value reset to 0
+		// 선생님 풀이
+		int a = 987654321;
+		for ( ;a >= 1; ) { // 앞뒤가 없어도 조건문이 된다. (while 과 동일한 형태)
+			sum += (sum % 10);
+			a /= 10;
 		}
 		System.out.println(sum);
 	}
