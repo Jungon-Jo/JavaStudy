@@ -11,6 +11,12 @@ public class test06 {
 		// 0. 선택받은 너
 		int[] letter0 = {8, 12, 4, 13, 2, 14, 4, 5};
 		// 짝수만 출력하시오.
+		// 1) 배열을 순회해야 함으로 for문 작성
+		//    - 변수 i의 초기값을 0으로 선언(배열의 시작은 "0")
+		//    - 조건은 배열의 길이보다 작아야함으로 "i < letter0.length"
+		//    - 1씩 증가하면 순회함으로 증감식은 "i++"
+		// 2) 짝수를 판별해야 함으로 %를 사용한 판별식 사용
+		//    - "letter0[i] % 2 == 0"
 		for (int i = 0; i < letter0.length; i++) {
 			if (letter0[i]%2==0) {
 				System.out.println(letter0[i]);
@@ -22,6 +28,13 @@ public class test06 {
 		// 1. 큰놈
 		// int[] letter0 = {8, 12, 4, 13, 2, 14, 4, 5};
 		// 배열의 가장 큰 수가 있는 인덱스를 출력하시오.
+		// 1) 배열을 순회해야 함으로 for문 작성
+		//    - 변수 i의 초기값을 0으로 선언(배열의 시작은 "0")
+		//    - 조건은 배열의 길이보다 작아야함으로 "i < letter0.length"
+		//    - 1씩 증가하면 순회함으로 증감식은 "i++"
+		// 2) 가장 큰 수를 판별해야 함으로 조건문 if를 사용
+		//    - 배열의 최댓값을 저장할 변수 "int maxLetter = 0" 선언(배열의 값이 정수임으로 int를 사용하며, 최댓값을 찾아야 함으로 초기값 "0"으로 설정)
+		//    - maxLetter에 저장된 정수보다 큰 값의 존재 여부를 판별해야 함으로 "letter0[i] > maxLetter"
 		int maxLetter = 0;
 		for (int i = 0; i < letter0.length; i++) {
 			if (letter0[i] > maxLetter) {
@@ -34,6 +47,16 @@ public class test06 {
 		System.out.println("문제2");
 		// 2. 현상수배
 		// 범인을 찾으시오. 범인은 짝수이면서 가장큰 값이다. 결과값 : 범인은 14입니다.
+		// 1) 배열을 순회해야 함으로 for문 작성
+		//    - 변수 i의 초기값을 0으로 선언(배열의 시작은 "0")
+		//    - 조건은 배열의 길이보다 작아야함으로 "i < letter2.length"
+		//    - 1씩 증가하면 순회함으로 증감식은 "i++"
+		// 2) 짝수인 가장 큰 수를 판별해야 함으로 조건문 if를 사용
+		//    - 배열의 최댓값을 저장할 변수 "int maxLetterEven = 0" 선언(배열의 값이 정수임으로 int를 사용하며, 최댓값을 찾아야 함으로 초기값 "0"으로 설정)
+		//    - 배열의 값이 짝수이면서 최대인 수를 판별해야함으로 조건이 두개 필요(짝수 판별, 최댓값 판별)
+		//    - 두 조건 모두 만족해야 함으로 &&를 사용
+		//    - 짝수를 판별해야 함으로 %를 사용한 판별식 사용 "letter2[i] % 2 == 0"
+		//    - maxLetterEven에 저장된 정수보다 큰 값의 존재 여부를 판별해야 함으로 "letter2[i] > maxLetterEven"
 		int[] letter2 = {8, 12, 4, 13, 25, 14, 4, 5};
 		int maxLetterEven = 0;
 		for (int i = 0; i < letter2.length; i++) {
@@ -48,11 +71,18 @@ public class test06 {
 		// 3. 비밀편지
 		// int[] letter0={8,12,3,13,1,14,3,4};
 		// letter  배열은 word문자열 알파벳의 위치이다. letter배열의 암호를 풀어서 편지의 내용을 출력하시오.
+		// 1) 배열을 순회해야 함으로 for문 작성
+		//    - 변수 i의 초기값을 0으로 선언(배열의 시작은 "0")
+		//    - 조건은 배열의 길이보다 작아야함으로 "i < letter0.length"
+		//    - 1씩 증가하면 순회함으로 증감식은 "i++"
+		// 2) letter0 배열에 해당하는 값의 위치에 있는 word 문자열의 문자를 뽑아내면 되므로 조건은 필요없다.
+		//    - "word.charAt(letter0[i])"를 사용
+		int[] letter3 = {8,12,3,13,1,14,3,4};
 		String word ="gehoudfkimjnlvy";
-		for (int i = 0; i < letter0.length; i++) {
-			System.out.print(word.charAt(letter0[i]));
+		for (int i = 0; i < letter3.length; i++) {
+			System.out.print(word.charAt(letter3[i]));
 		}
-		System.out.println("");
+		System.out.println(" ");
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제4");
@@ -62,28 +92,21 @@ public class test06 {
 		// size 설정값에 따라 공터에 건물을 지을 수 있는 위치는 모두 몇개인가?
 		// size가 2일경우에 7개이다. 
 		int[] arr = {1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1};
-		int size = 4;
+		int size = 2;
+		int building = 0;
 		int cnt4 = 0;
 		for (int i = 0; i < (arr.length - 1); i++) {
 			if (arr[i]==0) {
-				if (size==1) {
-					cnt4++;
-				} else if (size==2) {
-					if (arr[i] == arr[i+1]) {
-						cnt4++;
-					}
-				} else if (size==3) {
-					if (arr[i] == arr[i+1] && arr[i+1] == arr[i+2]) {
-						cnt4++;
-					}
-				} else if (size==4) {
-					if (arr[i] == arr[i+1] && arr[i+1] == arr[i+2] && arr[i+2] == arr[i+3]) {
-						cnt4++;
-					}
+				cnt4++;
+				if (cnt4 == size) {
+					building++;
+					cnt4 = size - 1;
 				}
+			} else {
+				cnt4 = 0;
 			}
 		}
-		System.out.println(cnt4);
+		System.out.println(building);
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제5");
@@ -99,7 +122,7 @@ public class test06 {
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제6");
-		String a ="23-56+45*2-56";
+		// String a ="23-56+45*2-56";
 		// 6. 수식을 계산하는 프로그램을 작성하세요.
 		// 수식 계산 규칙은 연산자 우선순위 없이 앞에서 부터 차례대로 계산한다.
 		// 지금까지 공부한 내용으로 해결하시고, 형변환만 검색이 가능합니다. 
