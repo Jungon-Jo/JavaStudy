@@ -38,7 +38,23 @@ public class test06_1 {
 		}
 		System.out.println(" ");
 		
-		
+		System.out.println("문제4");
+		int[] arr = {1, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1};
+		int size = 2;
+		int building = 0;
+		int cnt4 = 0;
+		for (int i = 0; i < (arr.length - 1); i++) {
+			if (arr[i]==0) {
+				cnt4++;
+				if (cnt4 == size) {
+					building++;
+					cnt4 = size - 1;
+				}
+			} else {
+				cnt4 = 0;
+			}
+		}
+		System.out.println(building);
 		
 		System.out.println("문제7");
 		int[] A = {34,2,35,8,45,31};
