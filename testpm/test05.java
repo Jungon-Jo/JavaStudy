@@ -211,7 +211,7 @@ public class test05 {
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제13");
-		String question = "abcdeabce";
+		// String question = "abcdeabce";
 		// question. ("."은 "참조"라는 의미/객체가 가진 기능(메서드), 전구 사용법 중 하나 -> 메서드)
 		
 		int cnt13 = 1;
