@@ -6,6 +6,11 @@ public class test05 {
 		System.out.println("=====================================================================");
 		System.out.println("문제1");
 		// 100부터 999까지의 숫자중에서 홀수만 출력하시오.
+		/* 문제 풀이 흐름
+		 * 1. (100부터 999까지의 숫자) -> for 문 작성(초기값 : 100, 조건 < 1000, 증감식 i++)
+		 * 2. %를 활용하여 홀수 판별
+		 */
+		
 		for (int i = 0; i < 900; i++) {
 			if ((i+100)%2==1) {
 				System.out.println(i+100);
@@ -15,6 +20,11 @@ public class test05 {
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제2");
 		// 1부터 100까지 숫자중에서 홀수의 총합을 구하시오.
+		/* 문제 풀이 흐름
+		 * 1. (1부터 100까지의 숫자) -> for 문 작성(초기값 : 1, 조건 < 100, 증감식 i++)
+		 * 2. %를 활용하여 홀수 판별
+		 * 3. 총합 = 총합을 저장할 수 있는 변수 선언!!
+		 */
 		int sum2 = 0;
 		for (int i = 0; i < 100; i++) {
 			if ((i+1)%2==1) {
@@ -63,29 +73,41 @@ public class test05 {
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제7");
-		int cnt = 0;
+		int cnt7 = 0;
 		int[] arr7 = {45, 23, 25, 64, 3, 24, 48};
 		for (int i = 0; i < (arr7.length); i++) {
 			if (arr7[i]%2==0) {
-				cnt++;
+				cnt7++;
 			}
 		}
-		System.out.println(cnt);
+		System.out.println(cnt7);
 		
 		System.out.println("=====================================================================");
 		System.out.println("문제8");
 		String test = "abcdeabce";
-		for (int i = 0; i < 9; i++) {
+		int cnt8 = 0;
+		for (int i = 0; i < test.length(); i++) {
 			char aaa = test.charAt(i);
-			System.out.println(aaa);
+//			System.out.println(aaa);
+			if ('a'==aaa) {
+				cnt8++;
+			}
 		}
+		System.out.println(cnt8);
+		// 자료형의 시작이 소문자(int, char, boolean, .../원시타입)로 시작하는 경우 "."을 사용할 수 없지만,
+		// 대문자(String.../창조타입)로 시작하는 경우 사용 가능
+		// 예외적으로 배열은 "."사용이 가능하다.
+		// 객체는 만들어진 부품이며 사용 절차가 이미 정의된 것이다.(대상에 대한 정확한 정의가 있어야 한다.)
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제9");
+		/* 10.  int[] arr = {45,23,25,64,3,24,48} 
+		 * 배열에서 가장 큰 값과 가장 큰 값이 있는 인덱스를 출력하시오.
+		 */
 		int minValueIndex = 64;
 		int maxValueIndex = 0;
 		int[] arr9 = {45, 23, 25, 64, 3, 24, 48};
-		for (int i = 0; i < (arr9.length); i++) {
+		for (int i = 0; i < arr9.length; i++) {
 			if (arr9[i] <= minValueIndex) {
 				minValueIndex = arr9[i];
 			}
@@ -108,15 +130,33 @@ public class test05 {
 
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제11");
+		/* int[] arr = {1,2,3,0,0,0,1,2,3,4,5,2,2,2,2,0,0,0,0,0,3,3}
+		 * 0은 터널이다. 가장 긴 터널의 길이를 구하시오.
+		 */
+		int cntA = 0;
+		int maxLengthA = 0;
+		int[] arrA = {1,2,3,0,0,0,1,2,3,4,5,2,2,2,2,0,0,0,0,0,3,3};
+		for (int i = 0; i < arrA.length; i++) {
+			if (arrA[i]==0) {
+				cntA++;
+			} else {
+				cntA = 0;
+			}
+			if (cntA > maxLengthA) {
+				maxLengthA = cntA;
+			}
+		}
+		System.out.println(maxLengthA);
+		
 		int cnt11 = 1;
 //		int tunnelNum = 0;
 		int maxTunnelLength11 = 0;
 		int[] arr11 = {1,2,3,0,0,0,1,2,3,4,5,2,2,2,2,0,0,0,0,0,3,3};
-		for (int i = 1; i < (arr11.length); i++) {
-			if (arr11[i-1] == arr11[i]) {
+		for (int i = 0; i < (arr11.length - 1); i++) {
+			if (arr11[i] == arr11[i+1]) {
 				cnt11++;
 //				tunnelNum = arr10[i];
-			} else if (arr11[i-1] == 0 && arr11[i-1] != arr11[i]) {
+			} else if (arr11[i] == 0 && arr11[i] != arr11[i+1]) {
 				if (maxTunnelLength11 <= cnt11) {
 					maxTunnelLength11 = cnt11;
 				}
@@ -127,7 +167,29 @@ public class test05 {
 		System.out.println(maxTunnelLength11);
 		
 		System.out.println("---------------------------------------------------------------------");
-		System.out.println("문제12");		
+		System.out.println("문제12");
+		/* int[] arr = {1,2,3,0,0,0,1,2,2,4,2,2,2,2,2,2,0,0,0,0,0,3,3}
+		 * 숫자는 터널 번호이다. 터널의 길이가 가장 긴 숫자와 길이를 출력하시오.  
+		 */
+		int cntB = 1;
+		int maxLengthB = 0;
+		int[] arrB = {1,2,3,0,0,0,1,2,2,4,2,2,2,2,2,2,0,0,0,0,0,3,3};
+		int bT = arrB[0];
+		int maxIndex = 0;
+		for (int i = 0; i < arrB.length; i++) {
+			if (arrB[i]==bT) {
+				cntB++;
+			} else {
+				cntB = 1;
+				bT = arrB[i];
+			}System.out.println(i + "/" + cntB);
+			if (cntB > maxLengthB) {
+				maxLengthB = cntB;
+				maxIndex = bT; 
+			}
+		}
+		System.out.println(maxIndex + " : " + maxLengthB);
+		
 		int cnt12 = 1;
 		int tunnelNum = 0;
 		int maxTunnelLength12 = 0;
@@ -141,7 +203,7 @@ public class test05 {
 					tunnelNum = arr12[i-1];
 					cnt12 = 1;
 				} else {
-				cnt12 = 1;
+					cnt12 = 1;
 				}
 			}
 		}
@@ -149,6 +211,9 @@ public class test05 {
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제13");
+		String question = "abcdeabce";
+		// question. ("."은 "참조"라는 의미/객체가 가진 기능(메서드), 전구 사용법 중 하나 -> 메서드)
+		
 		int cnt13 = 1;
 		char tunnelChar13 = ' ';
 		int maxTunnelLength13 = 0;
@@ -174,26 +239,30 @@ public class test05 {
 		
 		System.out.println("---------------------------------------------------------------------");
 		System.out.println("문제14");
-		int cnt14 = 1;
+		int cnt14 = 0;
 		char tunnelChar14 = ' ';
 		int maxTunnelLength14 = 0;
+		String resultZip = "";
 		for (int i = 1; i < ttt.length(); i++) {
 			if (ttt.charAt(i-1) == ttt.charAt(i)) {
 				cnt14++;
 			} else {
+				resultZip = resultZip + ttt.charAt(i-1) + cnt14;
 				maxTunnelLength14 = cnt14;
 				tunnelChar14 = ttt.charAt(i-1);
 				cnt14 = 1;
+
 				System.out.print(tunnelChar14);
 				System.out.print(maxTunnelLength14);
 			}
 		}
-		if (ttt.charAt(ttt.length()-1) == ttt.charAt(ttt.length()-2)) {
-			tunnelChar14 = ttt.charAt(ttt.length()-1);
-			maxTunnelLength14 = cnt14;
-			System.out.print(tunnelChar14);
-			System.out.println(maxTunnelLength14);
-		}
+//		if (ttt.charAt(ttt.length()-1) == ttt.charAt(ttt.length()-2)) {
+		tunnelChar14 = ttt.charAt(ttt.length()-1);
+		maxTunnelLength14 = cnt14;
+		System.out.print(tunnelChar14);
+		System.out.println(maxTunnelLength14);
+//		}
+		System.out.println(resultZip);
 	}
 
 }
