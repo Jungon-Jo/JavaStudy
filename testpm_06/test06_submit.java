@@ -1,6 +1,8 @@
-package testpm;
+package testpm_06;
 
-public class test06_1 {
+import java.util.Arrays;
+
+public class test06_submit {
 
 	public static void main(String[] args) {
 		System.out.println("문제0");
@@ -72,6 +74,34 @@ public class test06_1 {
 			}
 		}
 		System.out.println(A[0]);
+		
+		System.out.println("특별1");
+		String b = "6/4/3/2/5/1/4/5/6/7/8/9/1/2/3/4/5/6";
+		int[] B = new int[10]; 
+		for (int i = 0; i < b.length(); i += 2) {
+			if (b.charAt(i) == '0') {
+				B[0]++;
+			} else if (b.charAt(i) == '1') {
+				B[1]++;
+			} else if (b.charAt(i) == '2') {
+				B[2]++;
+			} else if (b.charAt(i) == '3') {
+				B[3]++;
+			} else if (b.charAt(i) == '4') {
+				B[4]++;
+			} else if (b.charAt(i) == '5') {
+				B[5]++;
+			} else if (b.charAt(i) == '6') {
+				B[6]++;
+			} else if (b.charAt(i) == '7') {
+				B[7]++;
+			} else if (b.charAt(i) == '8') {
+				B[8]++;
+			} else if (b.charAt(i) == '9') {
+				B[9]++;
+			}
+		}
+		System.out.print(Arrays.toString(B));
 	}
 
 }
