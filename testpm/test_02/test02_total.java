@@ -1,6 +1,6 @@
-package testpm;
+package testpm.test_02;
 
-public class test02 {
+public class test02_total {
 
 	public static void main(String[] args) {
 		System.out.println("--------------------------------------------------");

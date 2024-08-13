@@ -1,4 +1,4 @@
-package testpm_06;
+package testpm.test_06;
 
 public class test06_special02 {
 

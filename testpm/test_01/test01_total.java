@@ -1,9 +1,8 @@
-package testpm;
+package testpm.test_01;
 
-public class test01 {
+public class test01_total {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// 시나리오
 		System.out.println("메모장 프로그램");
 		String title = "나의 점심";

@@ -1,4 +1,4 @@
-package testpm;
+package testpm.test_04;
 
 public class test04 {
 

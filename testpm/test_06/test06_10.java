@@ -1,7 +1,4 @@
-package testpm_06;
-
-import java.util.Arrays;
-import java.util.Random;
+package testpm.test_06;
 
 public class test06_10 {
 
