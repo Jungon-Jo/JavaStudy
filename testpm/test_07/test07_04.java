@@ -17,9 +17,7 @@ public class test07_04 {
 		for (int i = 0; i < a.length; i++) {
 			a[i] = r.nextInt(100);
 			System.out.println(a[i]);
-			if (a[i] % 2 == 0) {
-				continue;
-			} else {
+			if (a[i] % 2 == 1) {
 				a[i] = 0;
 			}
 		}

@@ -34,9 +34,8 @@ public class test07_07 {
 					System.out.print(i + " ");
 				}
 			} else {
-				maxTime = jobTime[maxIndex];
 				if (jobTime[i] == 0) {
-					if (maxTime == 0) {
+					if (jobTime[maxIndex] == 0) {
 						break;
 					} else {
 						i = -1;

@@ -11,8 +11,7 @@ public class test07_05 {
 		Random r = new Random();
 		int[] lotto = new int[6];
 		for (int i = 0; i < lotto.length; i++) {
-			int num = r.nextInt(45) + 1;
-			lotto[i] = num;
+			lotto[i] = r.nextInt(45) + 1;
 		}
 		System.out.println(Arrays.toString(lotto));
 	}

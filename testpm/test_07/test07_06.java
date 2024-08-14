@@ -18,7 +18,7 @@ public class test07_06 {
 		System.out.println(Arrays.toString(a));
 		int maxCount = 0; // 가장 많이 뽑힌 휫수가 얼마인지 저장해주는 변수
 		int maxNum = 0; // 가장 많이 뽑힌 인덱스 번호에 +1을 해주여야 추천번호가 된다.
-		for (int i = 0; i < (a.length - 1); i++) {
+		for (int i = 0; i < a.length; i++) {
 			if (a[i] >= maxCount) {
 				maxCount = a[i];
 				maxNum = i + 1; // 번호는 index값에 1을 더해주어야 한다.
