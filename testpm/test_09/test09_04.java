@@ -23,10 +23,14 @@ public class test09_04 {
 						parking[j] = carnum[i];
 					} else if (parking[j+1] == 0) {
 						parking[j+1] = carnum[i];
+					} else {
+						System.out.println(carnum[i] + "는 주차가 불가하다.");
 					}
 				} else if (carnum[i] % 10 == j && j == parking.length - 1) {
 					if (parking[j] == 0) {
 						parking[j] = carnum[i];
+					} else {
+						System.out.println(carnum[i] + "는 주차가 불가하다.");
 					}
 				}
 			}
