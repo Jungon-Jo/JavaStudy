@@ -1,7 +1,8 @@
 <h1>JavaStudy 01</h1>
 
-<h6>Variable</h6>
-- Definition : storage space of value
-               (low use, high effect)
+<h3>Variable</h3>
+<p>- Definition</p>
+<p>&nbsp;&nbsp;storage space of value</p>
+<p>&nbsp;&nbsp;(low use, high effect)</p>
 
-<h6>Type</h6>
+<h3>Type</h3>
