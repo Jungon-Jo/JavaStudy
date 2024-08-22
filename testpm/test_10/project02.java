@@ -8,7 +8,7 @@ public class project02 {
 
 	public static void main(String[] args) {
 		
-		Arr a = new Arr();
+		Arr_m a = new Arr_m();
 		
 		
 		// 초보용

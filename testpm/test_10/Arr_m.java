@@ -1,6 +1,6 @@
 package testpm.test_10;
 
-public class Arr {
+public class Arr_m {
 
 	String[] arr = {
 			"물", "불", "돌", "눈", "땅", "손", "꽃", "길", "집", "산", "강", "달", "별", "차", "책", "쌀", "숲", "말", "몸", "값",

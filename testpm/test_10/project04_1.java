@@ -3,17 +3,38 @@ package testpm.test_10;
 import java.util.Random;
 import java.util.Scanner;
 
-public class game {
-	public static void execute() {
-			
-		Arr a = new Arr();
+public class project04_1 {
+
+	public static void main(String[] args) {
+		Arr_m a = new Arr_m();
 		Random r = new Random();
 		Scanner in = new Scanner(System.in);
 		int point = 100;
 		int[] cnt = new int[5];
 		
 		
-		Game: 
+		
+		System.out.println("<1> 초급  <2> 중급  <3> 고급");
+		
+		// 난이도 선택 코드
+		int select = in.nextInt();
+		in.nextLine();
+		if (select == 1) {
+			for (int i = 0; i < cnt.length; i++) {
+				cnt[i]=5-i;
+			}
+		} else if (select == 2) {
+			for (int i = 0; i  < cnt.length; i++) {
+				cnt[i]=3;
+			}
+		} else {
+			for (int i = 0; i < cnt.length; i++) {
+				cnt[i]=i+1;
+			}
+		}
+		System.out.println("Game Start!!!");
+		
+		// 게임 실행 코드
 		for(int i=r.nextInt(a.arr.length);;) {
 			if(cnt[a.arr[i].length()-1]!=0) {
 				System.out.println("주어진 단어를 입력하세요.");
@@ -42,11 +63,9 @@ public class game {
 			if(cnt[0]+cnt[1]+cnt[2]+cnt[3]+cnt[4]==0) {
 				break;
 			}
-			System.out.println("글자수의 남은 갯수");
-			for (int j = 0; j < cnt.length; j++) {
-				System.out.print(cnt[j]+" ");
-			}
-			System.out.println();
 		}
+		System.out.println("초보단계를 통과하였습니다!!!(점수는"+point+"입니다.)");
+
 	}
+
 }

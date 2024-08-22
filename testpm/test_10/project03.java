@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class project03 {
 
 	public static void main(String[] args) {
-		Arr a = new Arr();
+		Arr_m a = new Arr_m();
 //		Random r = new Random();
 //		int num = 0;
 //		String Q = "";
