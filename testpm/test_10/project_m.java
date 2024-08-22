@@ -26,7 +26,15 @@ public class project_m {
 		int[] cnt = new int[5];
 		int bomb = 0;
 		Timer timer=new Timer();
+		String[] noticeBoardStr = new String[10];  // 점수게시판
+		String renewalStr = "";  // 점수게시판 
+		int[] noticeBoardInt = new int[10];  // 점수게시판 
+		int renewalInt = 0;  // 점수게시판 
 		
+		
+		System.out.println("id를 입력해주세요"); // 점수게시판 
+		String id = in.next(); // 점수게시판 
+		in.nextLine(); // 점수게시판 
 		// 게임 룰 설명
 		System.out.println("<게임 규칙 설명>");
 		System.out.println("✊. 한글, 영어, 문자의 단어가 무작위로 제시됩니다.");
@@ -42,6 +50,7 @@ public class project_m {
 		System.out.println("\n원하는 단계의 숫자를 입력하면 게임이 시작됩니다.");
 		System.out.println("<1> 초급  <2> 중급  <3> 고급");
 		
+
 		// 난이도 선택 코드
 		int select = in.nextInt();
 		in.nextLine();
@@ -63,12 +72,16 @@ public class project_m {
 						System.out.println(green+"Game Start!!!"+exit);
 					
 						// 게임 실행 코드  -> 3초 카운트 뒤에 실행되도록 코드작성
-						Game_m.game(a, r, in, point, cnt, bomb, select, timer);
+						// 수정 -> 점수 게시판 작
+						int score = Game_m.game(a, r, in, point, cnt, bomb, select, timer);
+						int presentScore = score;
+						Score_j.Score(noticeBoardInt, renewalInt, noticeBoardStr, renewalStr, presentScore, id);
 					}
 			    }
 		};
 		timer1.schedule(timertask1, 0 , 1000);	
 		// 1초에 한번씩 출력(3초 카운트 다운 후 종료)
+
 	}
 }
 

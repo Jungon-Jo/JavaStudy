@@ -18,7 +18,7 @@ public class Game_m {
     public static final String exit     = "\u001B[0m" ;
     public static int timeout = 100;
 	
-	public static void game(Arr_m a, Random r, Scanner in, int point, int[] cnt, int bomb,int select, Timer timer) {
+	public static int game(Arr_m a, Random r, Scanner in, int point, int[] cnt, int bomb,int select, Timer timer) {
 		TimerTask timertask = new TimerTask() {
 			public void run() {
 				timeout--;
@@ -101,5 +101,6 @@ public class Game_m {
 			}
 			timer.cancel();
 		}
+		return point; // 수정 : 점수게시판에 점수 사용을 위해 반
 	}
 }

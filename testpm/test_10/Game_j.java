@@ -2,8 +2,6 @@ package testpm.test_10;
 
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Game_j {
 	public static volatile boolean stop = false;
@@ -16,24 +14,8 @@ public class Game_j {
     public static final String cyan     = "\u001B[36m" ;
     public static final String white    = "\u001B[37m" ;
     public static final String exit     = "\u001B[0m" ;
-    public static int timeout = 100;
 	
-	public static int game(Arr_m a, Random r, Scanner in, int point, int[] cnt, int bomb,int select, Timer timer) {
-		TimerTask timertask = new TimerTask() {
-			public void run() {
-				timeout--;
-				if (timeout % 10 == 0) {		 //10초단위로 출력
-					System.out.println();
-					System.out.println(red+timeout+"초 남았습니다."+exit);
-				} else if(timeout <= 0) {
-					System.out.println(red+"타임오버입니다."+exit);
-					timer.cancel();
-				}
-				
-			}
-		};
-		timer.schedule(timertask, 0, 1000);
-		loop:
+	public static int game(Arr_m a, Random r, Scanner in, int point, int[] cnt, int bomb, int select) {
 		for(int i=r.nextInt(a.arr.length);;) {
 			bomb=r.nextInt(10)+1;
 			if(cnt[a.arr[i].length()-1]!=0) {
@@ -55,7 +37,7 @@ public class Game_j {
 						}
 					}
 					i = r.nextInt(a.arr.length);	// 새로운 i값 뽑기(새로운단어)
-				}else {
+				} else {
 					System.out.println(red+"(ʘ言ʘ╬) 오답입니다. (ʘ言ʘ╬)"+exit);
 					if(bomb/3==0) {
 						point-=2*(2*a.arr[i].length());
@@ -71,31 +53,26 @@ public class Game_j {
 					System.out.println("현재점수는: "+point+"입니다.");
 					i = r.nextInt(a.arr.length);
 				}
-			}else if(cnt[a.arr[i].length()-1]==0){		
+			} else {		
 				i = r.nextInt(a.arr.length);
 			}
 			if(cnt[0]+cnt[1]+cnt[2]+cnt[3]+cnt[4]==0) {
 				System.out.println(yellow+"ദ്ദി ( ᵔ ᗜ ᵔ )"+exit);
 				if (select == 1) {
 					System.out.println("🎉🎉초보를 통과하였습니다!!!(점수는"+point+"입니다.)");
-					break loop;
 				}
 				if (select == 2) {
 					System.out.println("🎉🎉중급을 통과하였습니다!!!(점수는"+point+"입니다.)");
-					break loop;
 				}
 				if (select == 3) {
 					System.out.println("🎉🎉마스터를 통과하였습니다!!!(점수는"+point+"입니다.)");
-					break loop;
 				}
+				break;
 			}
-			if(point<=0) {
+			if(point == 0) {
 				System.out.println(green+"0점 입니다... "+exit);
 				System.out.println(green+"더 연습하세요!!!"+exit);
-				break loop;
-			}
-			if (timeout <= 0) {
-				break loop;
+				break;
 			}
 		}
 		return point;
