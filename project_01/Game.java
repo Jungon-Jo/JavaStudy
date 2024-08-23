@@ -1,11 +1,12 @@
-package testpm.test_10;
+package project_01;
 
 import java.util.Random;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Game_m {
+
+public class Game {
 	public static volatile boolean stop = false;
 	public static final String black    = "\u001B[30m" ;
     public static final String red      = "\u001B[31m" ;
@@ -18,16 +19,16 @@ public class Game_m {
     public static final String exit     = "\u001B[0m" ;
     public static int timeout = 100;
 	
-	public static int game(Arr_m a, Random r, Scanner in, int point, int[] cnt, int bomb,int select, Timer timer) {
+	public static void game(Arr a, Random r, Scanner in, int point, int[] cnt, int bomb,int select, Timer timer) {
 		TimerTask timertask = new TimerTask() {
 			public void run() {
 				timeout--;
 				if (timeout % 10 == 0) {		 //10초단위로 출력
-//					System.out.println();
-//					System.out.println(red+timeout+"초 남았습니다."+exit);
+					System.out.println();
+					System.out.println(red+timeout+"초 남았습니다."+exit);
 				} else if(timeout <= 0) {
-//					System.out.println(red+"타임오버입니다."+exit);
-					
+					System.out.println(red+"타임오버입니다."+exit);
+					timer.cancel();
 				}
 				
 			}
@@ -91,16 +92,12 @@ public class Game_m {
 			}
 			if(point<=0) {
 				System.out.println(green+"0점 입니다... "+exit);
-				System.out.println(green+"더 연습하세요!!!"+exit);
-				timer.cancel();
+				System.out.println(green+"더 연습하세요!!!"+exit); 
 				break;
 			}
 			if (timeout <= 0) {
-				timer.cancel();
 				break;
 			}
-			timer.cancel();
 		}
-		return point; // 수정 : 점수게시판에 점수 사용을 위해 반
 	}
 }
