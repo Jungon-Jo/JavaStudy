@@ -8,15 +8,7 @@ public class project01 {
 	public static void main(String[] args) {
 		
 		Arr_m a = new Arr_m();
-//		Random r = new Random();
-//		int num = 0;
-//		String Q = "";
-//		for (int i = r.nextInt(a.arr.length); i < a.arr.length;) {
-//			num = r.nextInt(10);
-//			Q = num + a.arr[i];
-//			break;
-//		}
-//		System.out.println(Q);
+
 		
 		
 		
