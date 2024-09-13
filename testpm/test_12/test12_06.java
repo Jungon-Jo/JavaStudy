@@ -9,7 +9,7 @@ public class test12_06 {
 //					 {16,17,18,19,20},
 //					 {21,22,23,24,25},
 //					 {26,27,28,29,30}};
-		int [][] a = new int[6 ][5];
+		int [][] a = new int[6][5];
 		int [][] b = new int[6][5];
 		int num = 1;
 		for(int i=0; i<a.length; i++) {

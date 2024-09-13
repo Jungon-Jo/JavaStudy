@@ -12,22 +12,22 @@ public class test12_05 {
 		if(row>col) {
 			for(int m=0; m<col/2; m++) {
 
-				for(int j=m; j<a[0].length-m; j++) {
+				for(int j=m; j<col-m; j++) {
 					a[m][j]=num;
 					num++;
 				}
 				
-				for(int i=m+1; i<a.length-(m+1); i++) {
-						a[i][a[i].length-(m+1)]=num;
+				for(int i=m+1; i<row-(m+1); i++) {
+						a[i][col-(m+1)]=num;
 						num++;
 				}
 				
-				for(int j=a[0].length-1-m; j>=m; j--) {
-					a[a.length-1-m][j]=num;
+				for(int j=col-1-m; j>=m; j--) {
+					a[row-1-m][j]=num;
 					num++;
 				}
 				
-				for(int i=a.length-1-(m+1); i>=m+1; i--) {	
+				for(int i=row-1-(m+1); i>=m+1; i--) {	
 						a[i][m]=num;
 						num++;	
 				}
@@ -35,7 +35,7 @@ public class test12_05 {
 			}
 			if(col%2==1) {
 				int m = (col+1)/2;
-				for(int j=m-1; j<a[0].length-(m-1); j++) {
+				for(int j=m-1; j<col-(m-1); j++) {
 					a[m-1][j]=num;
 					num++;
 				}
@@ -43,29 +43,29 @@ public class test12_05 {
 		} else {
 			for(int m=0; m<row/2; m++) {
 				
-				for(int j=m; j<a[0].length-m; j++) {
+				for(int j=m; j<col-m; j++) {
 					a[m][j]=num;
 					num++;
 				}
 				
-				for(int i=m+1; i<a.length-(m+1); i++) {
-						a[i][a[i].length-(m+1)]=num;
+				for(int i=m+1; i<row-(m+1); i++) {
+						a[i][col-(m+1)]=num;
 						num++;
 				}
 				
-				for(int j=a[0].length-1-m; j>=m; j--) {
-					a[a.length-1-m][j]=num;
+				for(int j=col-1-m; j>=m; j--) {
+					a[row-1-m][j]=num;
 					num++;
 				}
 				
-				for(int i=a.length-1-(m+1); i>=m+1; i--) {	
+				for(int i=row-1-(m+1); i>=m+1; i--) {	
 						a[i][m]=num;
 						num++;	
 				}
 			}
 			if(row%2==1) {
 				int m = (row+1)/2;
-				for(int j=m-1; j<a[0].length-(m-1); j++) {
+				for(int j=m-1; j<col-(m-1); j++) {
 					a[m-1][j]=num;
 					num++;
 				}
