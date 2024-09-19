@@ -11,7 +11,7 @@ public class test12_bonus {
 			}
 		}
 		System.out.println(a[20]);
-		for(int i=0; i<5000; i++) {
+		for(int i=1; i<5000; i++) {
 			if(a[i]==0) {
 				sum+=i;
 			}
