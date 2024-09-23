@@ -80,7 +80,6 @@ public class Customer_management {
 	}
 	
 	private void edit() {
-		Scanner in = new Scanner(System.in);
 		Customer_info Ci = new Customer_info();
 		if(CiA == null) {
 			System.out.println("입력된 정보가 없습니다. 입력 후 다시 시도하세요.");
@@ -119,7 +118,6 @@ public class Customer_management {
 //		Customer_menu();
 	}
 	private void delete() {
-		Scanner in = new Scanner(System.in);
 		Customer_info Ci = new Customer_info();
 		if(CiA == null) {
 			System.out.println("입력된 정보가 없습니다. 입력 후 다시 시도하세요.");

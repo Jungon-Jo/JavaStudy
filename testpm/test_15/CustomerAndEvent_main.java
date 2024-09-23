@@ -7,8 +7,8 @@ public class CustomerAndEvent_main {
 	public static void main(String[] args) {
 		Customer_management Cm = new Customer_management();
 		Event_management Em = new Event_management();
+		Scanner in = new Scanner(System.in);
 		while(true) {
-			Scanner in = new Scanner(System.in);
 			System.out.println("안녕하세요. ED 프로그램에 오신것을 환영합니다.");
 			System.out.println("원하시는 모드의 숫자를 입력하세요.");
 			System.out.println("1. 고객 관리");
