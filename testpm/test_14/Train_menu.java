@@ -88,7 +88,7 @@ public class Train_menu {
 						System.out.println("수정된 시간을 입력하시오.");
 						trainList[i].time();
 						break;
-					} else {
+					} else { 
 						System.out.println("입력하신 정보가 일치하지 않습니다.");
 					}
 				}
