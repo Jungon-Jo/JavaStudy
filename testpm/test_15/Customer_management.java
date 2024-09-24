@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Customer_management {
+	// 내용을 입력받아야 하므로, Scanner 클래스를 사용해주고, 
+	// 각각의 고객에 대한 정보를 저장한 객체 생성 후 주소를 저장할 배열(객체)을 생성한다.
 	Scanner in = new Scanner(System.in);
 	Customer_info[] CiA = new Customer_info[10];
 	Customer_management() {
