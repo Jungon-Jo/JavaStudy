@@ -30,6 +30,8 @@ public class Method {
 		// 과제 : 제목에서 개나리라는 단어가 포함된 부분을 가져오세요.(단어가 포함된 기준은 개나리 단어의 시작부터 스페이스까지)
 		//		  위 샘플에서는 [개나리야]를 가져오는 겁니다.
 		System.out.println(title.substring(title.indexOf(w),title.indexOf(" ",title.indexOf(w))));
+		
+		
 	}
 
 }
