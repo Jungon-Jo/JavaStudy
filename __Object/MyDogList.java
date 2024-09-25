@@ -26,6 +26,7 @@ public class MyDogList {
 		
 		for(int i = 0; i < 5; i++) {
 			System.out.println(d[i].name);
-		}
+		} 
+		// d[0]을 참조할 수 있는 값이 없으므로 error가 발생한다.
 	}
 }

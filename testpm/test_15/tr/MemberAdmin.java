@@ -1,5 +1,6 @@
 package testpm.test_15.tr;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MemberAdmin {
@@ -7,7 +8,8 @@ public class MemberAdmin {
 	// MemberOne 객체의 주소값을 저장할 배열(길이 5)를 생성한 것이다.
 	// 배열도 객체입니다.. mlist는 참조변수이고 MemberOne객체의 주소를 
 	// 저장한 배열의 주소를 저장하고 있다.
-	MemberOne[] mlist = new MemberOne[5];
+//	MemberOne[] mlist = new MemberOne[5];
+	ArrayList<MemberOne> mlist = new ArrayList<>();
 	EventAdmin eam = null;
 	
 	MemberAdmin() {
@@ -42,9 +44,9 @@ public class MemberAdmin {
 		}
 	}
 	public boolean duplexIDcheck(String id) {
-		for(int i = 0; i < mlist.length; i++) {
-			if(mlist[i]!=null) {
-				if(mlist[i].id.equals(id)) {
+		for(int i = 0; i < mlist.size(); i++) {
+			if(mlist.get(i)!=null) {
+				if(mlist.get(i).equals(id)) {
 					return true;
 					// return을 만나면 함수가 종료되고
 					// 호출부로 이동된다. break 필요 없음 
@@ -56,10 +58,13 @@ public class MemberAdmin {
 	
 	
 	private void allListUser() {
-		for(int i = 0; i < mlist.length; i++) {
-			if(mlist[i] != null) {
-				mlist[i].prt();
-			}
+//		for(int i = 0; i < mlist.length; i++) {
+//			if(mlist[i] != null) {
+//				mlist[i].prt();
+//			}
+//		}
+		for(int i = 0; i < mlist.size(); i++) {
+			mlist.get(i).prt();
 		}
 	}
 
@@ -75,13 +80,13 @@ public class MemberAdmin {
 			System.out.println("이름을 입력하세요");
 			String name = in.nextLine();
 			temp.name = name;
-			
-			for(int i = 0; i < mlist.length; i++) {
-				if(mlist[i] == null) {
-					mlist[i]=temp;
-					break;
-				}
-			}
+			mlist.add(temp);
+//			for(int i = 0; i < mlist.length; i++) {
+//				if(mlist[i] == null) {
+//					mlist[i]=temp;
+//					break;
+//				}
+//			}
 		}
 	}
 }

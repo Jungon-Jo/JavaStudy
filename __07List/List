@@ -1,0 +1,3 @@
+1. 배열 : 고정길이, 순차적(index) 자료 저장(순서가 있음) / 선언 : String[] a = new String[5];
+2. List : 가변길이, 순차적(index) 자료 저장(순서가 있음) / 선언 : ArrayList<String> b = new ArrayList<>(); 
+																  → String type 을 저장할 리스트 객체를 생성, 변수명은 b 이다.
