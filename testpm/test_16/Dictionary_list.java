@@ -8,12 +8,17 @@ public class Dictionary_list {
 	Dictionary_list() {
 		
 	}
-	public ArrayList<Dictionary_enroll> list() {
-		enroll = new Dictionary_enroll();
+	public void list(Dictionary_enroll enroll) {
 		list.add(enroll); 
 		
-		prt(0);
-		return list;
+//		for(int i = 0; i < list.size(); i++) {
+//			prt(i);
+//		}
+//		return list;
+	}
+	public Dictionary_enroll enroll() {
+		enroll = new Dictionary_enroll();
+		return enroll;
 	}
 	public void prt(int i) {
 		System.out.println("--------------");
@@ -21,3 +26,8 @@ public class Dictionary_list {
 		System.out.println("--------------");
 	}
 }
+//for(int i = 0; i < list.size(); i++) {
+//	System.out.println("--------------");
+//	System.out.println(list.get(i).word);
+//	System.out.println("--------------");
+//}

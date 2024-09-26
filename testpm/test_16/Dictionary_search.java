@@ -15,29 +15,41 @@ public class Dictionary_search {
 	}
 	public void result(String search) {
 		for(int i = 0; i < list.list.size(); i++) {
+			System.out.println("--------------");
+			System.out.println(list.list.get(i).word);
+			System.out.println("--------------");
+		}
+		for(int i = 0; i < list.list.size(); i++) {
 			if(search.equals(list.list.get(i).english.word)) {
 				list.prt(i);
+				break;
 //				System.out.println(list.list.get(i));
-				while(true) {
-					System.out.println("1.검색 / 2.수정 / 3.삭제 / 4.메뉴");
-					System.out.println("선택 기능 >> ");
-					int selNum = in.nextInt();
-					in.nextLine();
-					if(selNum == 1) {
-						search();
-					} else if(selNum == 2) {
-						edit(search);
-					} else if(selNum == 3) {
-						delete(search);
-					} else if(selNum == 4) {
-						break;
-					} else {
-						System.out.println("유효하지 않은 값입니다. 다시 입력하세요.");
-					}
-				}
-			} else {
-				System.out.println("입력한 단어에 대한 정보가 없습니다. 다시 검색해주세요.");
+			}
+		}
+//		for(int i = 0; i < list.list.size(); i++) {
+//			if(search != list.list.get(i).english.word) {
+//				System.out.println("입력한 단어에 대한 정보가 없습니다. 다시 검색해주세요.");
+//				search();
+//			}
+//		}
+		while(true) {
+			System.out.println("1.검색 / 2.수정 / 3.삭제 / 4.메뉴");
+			System.out.println("선택 기능 >> ");
+			int selNum = in.nextInt();
+			in.nextLine();
+			if(selNum == 1) {
 				search();
+				break;
+			} else if(selNum == 2) {
+				edit(search);
+				break;
+			} else if(selNum == 3) {
+				delete(search);
+				break;
+			} else if(selNum == 4) {
+				break;
+			} else {
+				System.out.println("유효하지 않은 값입니다. 다시 입력하세요.");
 			}
 		}
 	}
@@ -45,7 +57,7 @@ public class Dictionary_search {
 		
 		for(int i = 0; i < list.list.size(); i++) {
 			if(search.equals(list.list.get(i).english.word)) {
-				list.list.set(i, list.list().get(i));
+				list.list.set(i, list.enroll());
 				break;
 			}
 		}
