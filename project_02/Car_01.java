@@ -3,13 +3,16 @@ package project_02;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Car {
+public class Car_01 {
+	userCarList_01 userCarList = null;
 	String carFrontNum = null;
 	String carBackNum = null;
 	String carNum = null;
 	String[] classification = {"입주민", "방문객"};
-
-	public ArrayList carAdd(int classificationNum, String pwd) {
+	Car_01() {
+		
+	}
+	public ArrayList carType(int classificationNum) {
 		Scanner in = new Scanner(System.in);
 		ArrayList<String> carInfo = null;
 		System.out.println("차량 앞번호를 입력해주세요.");
@@ -21,12 +24,10 @@ public class Car {
 			carInfo = new ArrayList<>();
 			carInfo.add(carNum);
 			carInfo.add(classification[0]);
-			carInfo.add(pwd);
 		} else {
 			carInfo = new ArrayList<>();
 			carInfo.add(carNum);
 			carInfo.add(classification[1]);
-			carInfo.add(pwd);
 		}
 		return carInfo;
 	}

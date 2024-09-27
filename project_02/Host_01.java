@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Host_01 {
-	Menu mainMenu = null;
-	userCarList userCarList = null;
-	guestCarList guestCarList = null;
+	addAndList mainMenu = null;
+	userCarList_01 userCarList = null;
+	guestCarList_01 guestCarList = null;
 
 	Host_01() {
 		if(userCarList == null) {
-			userCarList = new userCarList();
+			userCarList = new userCarList_01();
 		}
 		if(guestCarList == null) {
-			guestCarList = new guestCarList();
+			guestCarList = new guestCarList_01();
 		}
 	}
 	public void hostMenu() {
