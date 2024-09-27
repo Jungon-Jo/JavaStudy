@@ -12,13 +12,16 @@ public class addAndList {
 		if(carList == null) { 
 			carList = new CarList();
 		}
-		menu();
 	}
 	public void menu() {
 		while(true) {
 			Scanner in = new Scanner(System.in);
+			System.out.println("---아파트 차량 조회 시스템입니다.---");
+			System.out.println("기능을 선택해주세요.");
+			System.out.println("----------------------------");
 			System.out.println("1. 사용자 등록");
 			System.out.println("2. 차량 등록");
+			System.out.println("3. 종료");
 			System.out.println("선택 항목 >> ");
 			int selNum = in.nextInt();
 			in.nextLine();
@@ -32,7 +35,7 @@ public class addAndList {
 				} else {
 					hostList.prt();
 				}
-			} else {
+			} else if(selNum == 2) {
 				carList.hostList = hostList;
 				System.out.println("원하는 기능을 선택하세요");
 				System.out.println("1. 등록 / 2. 조회");
@@ -71,6 +74,9 @@ public class addAndList {
 					in.nextLine();
 					carList.prt(showNum);
 				}
+			} else {
+				System.out.println("차량 조회 시스템을 종료합니다");
+				break;
 			}
 		}
 	}
