@@ -3,15 +3,16 @@ package project_02;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class HostList {
+public class HostList { 
 	Host host = null;
 	ArrayList<ArrayList> myHost = new ArrayList<>();
 	String[] ref = {"동 : ", "호 : ", "이름 : ", "차량 정보 : "};
 	HostList() {
 	}
-	public void list() {
+	public ArrayList list() {
 		host = new Host();
 		myHost.add(host.hostAdd());
+		return myHost;
 	}
 	public void prt() {
 		for(int i = 0; i < myHost.size(); i++) {
