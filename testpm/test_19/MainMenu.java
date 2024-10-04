@@ -31,6 +31,21 @@ public class MainMenu {
 			in.nextLine();
 			if(selNum == 1) {
 				vocaList();
+				while(true) {
+					System.out.println("추가기능을 선택하세요.");
+					System.out.println("1. 삭제 / 2. 수정 / 3. 종료");
+					int addNum = in.nextInt();
+					in.nextLine();
+					if(addNum == 1) {
+						vocaDel();
+					} else if(addNum == 2) {
+						vocaEdit();
+					} else if(addNum == 3) {
+						break;
+					} else {
+						System.out.println("유효하지 않은값입니다. 다시 입력해주세요.");
+					}
+				}
 			} else if(selNum == 2) {
 				vocaAdd();
 			} else if(selNum == 3) {
@@ -41,6 +56,33 @@ public class MainMenu {
 				System.out.println("유효하지 않은값입니다. 다시 입력해주세요.");
 			}
 		}
+	}
+	private void vocaEdit() {
+		Scanner in = new Scanner(System.in);
+		try {
+			File file = new File("Vocabulary.txt");
+			FileReader file_reader = new FileReader(file);
+			BufferedReader bufferedReader = new BufferedReader(file_reader);
+			System.out.println("수정할 단어 입력");
+			String searchVoca = in.nextLine();
+				while(true) {
+					String line = bufferedReader.readLine();
+					if(line == null) {
+						break;
+					} else if(line.contains(searchVoca)) {
+						System.out.println(line);
+						line.replace(searchVoca, null);
+						vocaAdd();
+					}
+				}
+			bufferedReader.close();
+		} catch(Exception e) {
+			e.getStackTrace();
+		}
+
+	}
+	private void vocaDel() {
+		
 	}
 	private void menuList() {
 		System.out.println("///영단어장///");
