@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class MainMenu {
 	VocabularyAdd vocaAdd = null;
-	ArrayList<VocabularyAdd> voca = new ArrayList<>();
 	MainMenu() {
 		try {
 			File file = new File("Vocabulary.txt");
@@ -70,7 +69,6 @@ public class MainMenu {
 	private void vocaAdd() {
 		vocaAdd = new VocabularyAdd();
 		vocaAdd.add();
-		voca.add(vocaAdd);
 		try {
 			File file = new File("Vocabulary.txt");
 			FileWriter writer = new FileWriter(file, true);
