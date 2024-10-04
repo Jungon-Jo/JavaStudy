@@ -92,7 +92,7 @@ public class manageStudent {
 			System.out.println("조회를 원하시는 학생의 이름을 입력하시오.");
 			String stuName = in.nextLine();
 			for(int i = 0; i < studentList.size(); i++) {
-				if(studentList.get(i).name.equals(stuName)) {
+				if(studentList.get(i).name.contains(stuName)) {
 					studentList.get(i).prt();
 					System.out.println();
 				}
