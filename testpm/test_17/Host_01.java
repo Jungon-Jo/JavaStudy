@@ -1,9 +1,9 @@
-package project_02;
-
-import java.util.ArrayList;
-import java.util.Scanner;
-
-public class Host_01 {
+//package project_02;
+//
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//
+//public class Host_01 {
 //	addAndList mainMenu = null;
 //	userCarList_01 userCarList = null;
 //	guestCarList_01 guestCarList = null;
@@ -67,4 +67,4 @@ public class Host_01 {
 //			host[4] = userCarList.userCarList;
 //		}
 //	}
-}
+//}

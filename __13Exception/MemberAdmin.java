@@ -36,7 +36,7 @@ public class MemberAdmin {
 			// try 구문을 빠져 나갈 때, 실행 되는 block/ 예외 발생 여부 상관없이 실행
 			// finally 구문은 없어도 try/catch 구문은 실행되는데 지장이 없다
 		}
-		BufferedWriter bufferedWriter = new BufferedWriter(writer);
+//		BufferedWriter bufferedWriter = new BufferedWriter(writer);
 	}
 	private void test1() {
 		MemberOne[] mm = new MemberOne[5];
